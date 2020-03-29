@@ -1,0 +1,379 @@
+body {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 100%;
+  background-color: white;
+  margin: 0;
+  width: 100%
+}
+
+/* link styles */
+a {
+  color: inherit;
+  color: black;
+}
+
+/* header styles */
+header {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border-bottom: 1px solid;
+  border-bottom-color: #ab2626;
+  padding: 5px;
+}
+
+header div {
+  display: flex;
+  flex-direction: row;
+}
+
+header h4 {
+  color: black;
+}
+
+header img {
+  padding-right: 10px;
+}
+
+/* nav styles */
+nav a {
+  text-decoration: none;
+}
+nav {
+  font-family: verdana, sans-serif;
+}
+nav ul li a {
+  color: black;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  font-size: .8em;
+  text-transform: lowercase;
+}
+nav ul li a {
+  display: block;
+  padding: 6px;
+  margin: .15em;
+}
+nav ul li a:focus, nav ul li a:hover, nav ul li a:active {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-middle {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+}
+
+.hours {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.day {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* main "products" styles */
+main, h1, h2, h3 {
+  font-family: sans-serif;
+}
+
+main section h1 {
+  /* <!--Source: https://www.thehealthy.com/wp-content/uploads/2018/09/50-Ways-to-Have-a-Healthier-Fall-30-760x506.jpg --> */
+  background:  url(../images/backgroundapple.jpg) no-repeat center center;
+  /* citation in HTML */
+  background-size: cover;
+  height: 100px;
+  padding-top: 50px;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 2em;
+  margin: 0;
+  padding-left: 0;
+  padding-right:0;
+}
+
+main {
+  flex-grow: 2;
+  font-size: 1em;
+  line-height: 2em;
+  color: #383838;
+  margin: 10px;
+  padding: 1em;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: #7A0002;
+}
+
+main img {
+  display: block;
+  margin: 0 1em 1em 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.box {
+  height: 600px;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  overflow-wrap: normal;
+  flex-grow: 200;
+  display: block;
+  justify-content: center;
+  align-content: center;
+}
+
+.schedbox {
+  min-height: 900px;
+  min-width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  overflow-wrap: normal;
+  flex-grow: 200;
+  display: block;
+  justify-content: center;
+  align-content: center;
+}
+
+.imagebox {
+  min-height: 250px;
+  min-width: 100px;
+  max-width: 500px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  flex-grow: 200;
+  display: block;
+  justify-content: center;
+  align-content: center;
+}
+
+.box img {
+  display: inline-block;
+  text-align: center;
+}
+
+table {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.table {
+  text-align: center;
+}
+
+.form div{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+
+label {
+  text-align: right;
+  flex-basis: 25%;
+  padding-right: 10px;
+}
+
+span {
+  color: #7A0002;
+}
+
+input {
+  text-align: left;
+}
+
+.hidden{
+  display: none;
+}
+
+.submit-right{
+  display: block!important;
+  text-align: right;
+}
+
+.checkbox label{
+    line-height: 20px;
+}
+
+.radio label{
+    line-height: 20px
+}
+
+/* footer styles */
+footer {
+  border-top: 1px solid;
+  border-top-color: #7A0002;
+  font-family: verdana, sans-serif;
+  margin: 10px;
+}
+
+/* mobile*/
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  header div {
+    margin: 0 auto;
+  }
+
+  main section h1 {
+    font-size: 1.2em;
+  }
+
+  .hours {
+    flex-direction: column;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .imagebox {
+    width: 50%;
+    height: 150%;
+    flex-grow:100;
+    margin: 0 auto;
+  }
+
+  .page-middle {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    flex-basis: 50%;
+  }
+
+  .box {
+    width: 50%;
+    height: 150%;
+    margin: 0 auto;
+  }
+  .tcat img {
+    max-width: 400px;
+  }
+  .gmaps img {
+    max-width: 400px;
+  }
+  .map img {
+    max-width: 400px;
+  }
+
+  .form div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    text-align: left;
+  }
+
+  .checkbox{
+    display: flex!important;
+    flex-direction: row!important;
+  }
+
+  .radio{
+    display: flex!important;
+    flex-direction: row!important;
+  }
+}
+
+/*tablet*/
+@media (min-width: 600px) and (max-width: 900px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .imagebox {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+  }
+
+  .box {
+    width: 50%;
+    height: 150%;
+    margin: 0 auto;
+  }
+
+  main section h1 {
+    font-size: 1.5em;
+  }
+
+  .page-middle {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .tcat img {
+    max-width: 400px;
+  }
+  .gmaps img {
+    max-width: 600px;
+  }
+  .map img {
+    max-width: 600px;
+  }
+  .form div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    text-align: left;
+  }
+
+  .checkbox{
+    display: flex!important;
+    flex-direction: row!important;
+  }
+
+  .radio{
+    display: flex!important;
+    flex-direction: row!important;
+  }
+}
