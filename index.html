@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" Content="width=devices-width, initial-scale=1">
+  <title>Ithaca Apple Harvest Festival</title>
+   <link rel="stylesheet" type="text/css" href="styles/site.css" media="all"/>
+   <script src="scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+   <script src="scripts/validation.js" type="text/javascript"></script>
+</head>
+<body>
+
+  <div id = "container">
+    <header>
+      <div>
+        <!-- Source: https://image.flaticon.com/icons/svg/167/167730.svgMade -->
+        <img src = "images/apple.png" alt="Organization logo"/>
+        <h4>Ithaca Apple Harvest Festival</h4>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directions.html">Directions</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class = "middle">
+      <main>
+        <section>
+          <h1>Welcome to the 40th annual Downtown Ithaca Apple Harvest Festival! Friday, September 27th to Sunday, September 29th</h1>
+          <!--Source: https://www.thehealthy.com/wp-content/uploads/2018/09/50-Ways-to-Have-a-Healthier-Fall-30-760x506.jpg -->
+          <p>Background Image Source: <cite><a href="https://www.thehealthy.com/wp-content/uploads/2018/09/50-Ways-to-Have-a-Healthier-Fall-30-760x506.jpg">The Healthy Blog</a></cite></p>
+        </section>
+
+        <h2>Hours</h2>
+        <div class = "hours">
+          <div class="day">
+            <h3>Friday</h3>
+            <p>12:00pm - 6:00pm</p>
+          </div>
+          <div class="day">
+            <h3>Saturday and Sunday</h3>
+            <p>10:00am - 6:00pm</p>
+          </div>
+        </div>
+
+
+        <h2>History of the Festival</h2>
+        <div class="row first-row">
+          <div class="imagebox">
+            <!--Source: https://www.downtownithaca.com/wp-content/uploads/AppleHarvest-Classic.jpg -->
+            <img src = "images/fest.jpg" alt="People at Apple Fest"/>
+            <p>Image Source: <cite><a href="https://www.downtownithaca.com/wp-content/uploads/AppleHarvest-Classic.jpg">Ksenia Verdiyan for Downtown Ithaca Alliance</a></cite></p>
+          </div>
+          <div class="imagebox">
+            <!--Source: https://www.downtownithaca.com/wp-content/uploads/AppleHarvest_Market.jpg -->
+            <img src = "images/applecider.jpg" alt="Cider"/>
+            <p>Image Source: <cite><a href="https://www.downtownithaca.com/wp-content/uploads/AppleHarvest_Market.jpg">Ksenia Verdiyan for Downtown Ithaca Alliance</a></cite></p>
+          </div>
+          <div class="imagebox">
+            <!--Source: https://www.downtownithaca.com/wp-content/uploads/AH_doughtnuts.jpg -->
+            <img src = "images/donuts.jpg" alt="Donuts"/>
+            <p>Image Source: <cite><a href="https://www.downtownithaca.com/wp-content/uploads/AH_doughtnuts.jpg">Ksenia Verdiyan for Downtown Ithaca Alliance</a></cite></p>
+          </div>
+        </div>
+        <p>Apple Fest has a rich history full of yummy apples and cider. The festival has been running in Downtown Ithaca for 40 years, attracting diverse food vendors, college students, and delicious apple-based foods</p>
+
+        <section>
+          <h3>Give feedback about your visit!</h3>
+          <div class = "form">
+            <form id= "feedback" method="post" action ="https://www.cs.cornell.edu/courses/cs1300/2019fa/submit.php" novalidate>
+
+              <div>
+                <label for="name"> Name:</label>
+                <input id="name" type="text" name="name">
+              </div>
+
+              <div>
+                <label for="email"> Email: </label>
+                  <input id="email" type="text" name="email">
+              </div>
+
+              <div>
+                <label for="datetime"> Date and time of visit: </label>
+                <input id="datetime" type="datetime-local" name="datetime" required>
+                <span class="errorContainer hidden" id="datetimeError">
+                  Select a valid date and time of your visit.
+                </span>
+              </div>
+
+              <div>
+                <label> How did you learn about the festival?</label>
+                  <div class="checkbox">
+                    <input id="students" type="checkbox" name="checkbox" required>
+                    <label for="students">Other Students</label>
+                  <!-- </div>
+                  <div> -->
+                    <input id="cornell" type="checkbox" name="checkbox">
+                    <label for="cornell">Cornell University</label>
+                  <!-- </div>
+                  <div> -->
+                    <input id="ithaca" type="checkbox" name="checkbox">
+                    <label for="ithaca">Downtown Ithaca website</label>
+                  <!-- </div> -->
+                    <span class="errorContainer hidden" id="checkboxError">
+                    Select an option.
+                  </span>
+                </div>
+              </div>
+
+
+              <div>
+                <label for="positive"> What did you enjoy at the festival? </label>
+                  <textarea id="positive" rows="5" cols="30" name="positive" required></textarea>
+                  <span class="errorContainer hidden" id="positiveError">
+                    This field is required.
+                  </span>
+              </div>
+
+              <div>
+                <label for="improvement"> What would you like to see improved about the festival? </label>
+                  <textarea id="improvement" rows="5" cols="30" name="improvement" required></textarea>
+                  <span class="errorContainer hidden" id="improvementError">
+                    This field is required.
+                  </span>
+              </div>
+
+              <div>
+                <label>Would you recommend the Ithaca Apple Harvest Festival to a friend?</label>
+                <div class="radio">
+                  <input type="radio" id="yes" name="yes-no" value="yes" required>
+                  <label for="yes">Yes</label>
+                  <input type="radio" id="no" name="yes-no" value="no">
+                  <label for="no">No</label>
+                  <span class="errorContainer hidden" id="yes-noError">
+                    Select an option.
+                  </span>
+                </div>
+              </div>
+
+
+                <div class="submit-right">
+                  <input id="request-submit" type="submit" value="Submit">
+                </div>
+
+            </form>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <footer>
+      <p>Apple Logo Source: Made by <cite><a href="https://www.flaticon.com/free-icon/apple_167730#term=apple&page=1&position=15">Freepik from Flat Icons</a></cite></p>
+      <p>2019, Amanda He.</p>
+    </footer>
+  </div>
+
+</body>
